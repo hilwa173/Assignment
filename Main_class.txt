@@ -1,0 +1,70 @@
+{
+    public static void main(String[] args) {
+        int x = 10;
+        int y = 5;
+        int z = 8;
+        double c = 6.5;
+        String arithmetic;
+
+        int sum = x + y;
+        int sub = x - y;
+        int pro = x * y;
+        int div = x / y;
+        System.out.println("assume let ");
+        System.out.println("x=40");
+        System.out.println("y=20");
+        System.out.println("z=10");
+        boolean a = !(x == y);
+        boolean b = (x < y) && (y < z);
+
+        if (x > y && x > z)
+            System.out.println("x is greater than y and z");
+        else if (y > x && y > z)
+            System.out.println("y is greater than x and z");
+        else System.out.println("z is greater than x and y");
+
+
+        //4.arithmetic operation
+        System.out.println("ARITHMETIC OPERATION");
+        System.out.println("enter 'add' for addition");
+        System.out.println("enter 'sub' for substraction");
+        System.out.println("enter 'mul' for product");
+        System.out.println("enter 'div' for division");
+        Scanner in = new Scanner(System.in);
+        arithmetic = in.nextLine();
+        switch (arithmetic) {
+            case "add":
+                System.out.println("the sum of x and y is  " + sum);
+                break;
+            case "sub":
+                System.out.println("the diffirence b/n them is " + sub);
+                break;
+            case "mul":
+                System.out.println("the product of x and y is  " + pro);
+                break;
+            case "div":
+                System.out.println("the quotient is" + div);
+                break;
+            default:
+                System.out.println("error");
+        }   //8.method with parameter & return type
+        int result = remainder(11, 2);
+        System.out.println("remainder of 11 and 2 is  " + result);
+
+
+        for (int i = 0; i < 2; i++) {
+            System.out.println("this is for loop");
+        }
+        int sc = 0;
+        while (sc < 2) {
+            System.out.println("example of while loop");
+            sc++;
+        }
+    }
+
+    public static int remainder(int a, int b) {
+        return a % b;
+    }
+
+
+}
